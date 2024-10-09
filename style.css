@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+    overscroll-behavior: none;
+}
+body{
+    font-family: "Lato", sans-serif;
+    background-image: url(andrew-schultz-EAlbsTo6nuQ-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+h1{
+    font-size: 2.5rem;
+}
+.container{
+    backdrop-filter: blur(100px);
+    color: aliceblue;
+    height: auto;
+    width: 70vw;
+    border-radius: 20px;
+    margin: 2rem 0;
+}
+
+.form-container{
+    width: 80%;
+    margin: 2rem;
+}
+
+.search-container{
+    backdrop-filter: blur(100px);
+    color: aliceblue;
+    height: auto;
+    width: 70vw;
+    border-radius: 20px;
+}
+
+.doing-search{
+    margin: 2rem;
+    width: 100%;
+}
+
+.doing-search input{
+    margin-right: 1rem;
+}
+
+#seach-box{
+    width: 80%;
+}
+
+.search-input{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-result{
+    margin: 2rem;
+    display: none;
+}
+
+.table-container{
+    margin: 2rem;
+    display: none;
+}
+
+#search-box{
+    height: 30px;
+    width: 70%;
+}
+
+.button1{
+    background-color: #66635B;
+    color: aliceblue;
+    width: 5rem;
+    height: 2rem;
+    font-size: 13px;
+    width: 10rem;
+
+    &:hover{
+        background-color:#D7CEB2;
+        color: black
+    }
+}
+
+#button{
+    margin-top: 2rem;
+
+}
+
+
+
+table{
+    border-collapse: collapse;
+}
+
+th{
+    
+    padding: 1vmin 2vmin;
+    background-color: #A59E8C;
+    color: rgb(50, 45, 45);
+    border: 2px solid rgb(54, 53, 53);
+}
+
+td{
+    padding: 1vmin 2vmin;
+    background-color: #D7CEB2;
+    color: rgb(50, 45, 45);
+    border: 2px solid rgb(54, 53, 53);
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.box label{
+    width: 40%
+}
+
+.box input{
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px 0;
+}
+
+#message {
+    padding: 1rem;
+    position: fixed;
+    top:1rem;
+    right:1rem;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.3;
+    font-weight: bold;
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+  }
+  
+  #message.success {
+    background-color: #4caf50;
+    color: white;
+    visibility: visible;
+  }
+  
+  #message.error {
+    background-color: #f44336;
+    color: white;
+    visibility: visible;
+  }
+
+  td button{
+    border: none;
+    background-color: #D7CEB2;
+    color: black;
+    cursor: pointer;
+    &:hover{
+        color: #f44336;
+    }
+  }
+
+
+
+
+
+
+
+
+

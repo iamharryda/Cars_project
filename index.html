@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="car.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+
+        <div id="message"></div>
+
+        <div class="form-container">
+            <h1>Place your car information</h1>
+            <form id="car-form">
+                <div class="box">
+                    <label for="licensePlate">License Plate:</label>
+                    <input type="text" id="licensePlate" name="licensePlate" placeholder=" Format: XXX-000 (e.g. ABC-123)" required>
+                </div>
+                <div class="box">
+                    <label for="year">Year:</label>
+                    <input type="text" id="year" name=" year" placeholder=" Year of manufacture (1886-2024)" required>
+                </div>
+                <div class="box">
+                    <label for="maker">Maker:</label>
+                    <input type="text" id="maker" name="maker" placeholder=" e.g. Ferrari" required>
+                </div>
+                <div class="box">
+                    <label for="model">Model:</label>
+                    <input type="text" id="model" name="model" placeholder=" e.g. G341" required>
+                </div>
+                <div class="box">
+                    <label for="currentOwner">Current Owner:</label>
+                    <input type="text" id="currentOwner" name="currentOwner" placeholder=" e.g. Joy" required>
+                </div>
+                <div class="box">
+                    <label for="price">Price:</label>
+                    <input type="number" id="price" name="price" placeholder=" Positive number only (e.g. 1000)" required>
+                </div>
+                <div class="box">
+                    <label for="color">Color:</label>
+                    <input type="text" id="color" name="color" placeholder=" e.g. Black" required>
+                </div>
+
+                <button type="submit" id="button" class="button1">Submit</button>
+              </form>
+        </div>
+
+        <div class="table-container">
+            <h1>Car Table Database</h1>
+            <table id="car-table">
+            </table>
+        </div>
+    </div>
+    <div class="search-container">
+        <div class="doing-search">
+            <h1>Car database</h1>
+            <div class="search-input">
+                <input type="text" name="" id="search-box" placeholder="Search your car here">
+                <button id="search-button" class="button1">Search</button>
+            </div>
+        </div>
+        <div class="search-result">
+            <h2>here is your searched CAR </h2>
+            <div id="result"></div>
+        </div>
+
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
