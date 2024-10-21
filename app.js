@@ -102,9 +102,9 @@ const loadCarsFromLocalStorage = () => {
 // Function to generate the table for all cars
 function generateTable() {
     const table = document.querySelector("#car-table");
-    // Clear the table first
+    // Clearing the table first
     table.innerHTML = '';
-    // Create the table header
+    // Creating the table header
     let headerRow = table.insertRow();
     let headers = ["License Plate", "Year", "Maker", "Model", "Current Owner", "Price(€)", "Discounted Price(€)", "Color", ""];
     headers.forEach((header) => {
@@ -112,7 +112,7 @@ function generateTable() {
         th.textContent = header;
         headerRow.appendChild(th);
     });
-    // Create the table rows
+    // Creating the table rows
     cars.forEach((car) => {
         let row = table.insertRow();
         let cells = [car.licensePlate, car.year, car.maker, car.model, car.currentOwner, car.price, car.discountedPrice, car.color];
@@ -121,18 +121,19 @@ function generateTable() {
             td.textContent = cell;
             row.appendChild(td);
         });
-        // Create a delete button
+        // Creating a delete button
         let deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.onclick = () => {
-            // Find the index of the car to delete
+            // Finding the index of the car to delete
             let index = cars.findIndex(c => c.licensePlate === car.licensePlate);
             // Remove the car from the array
             cars.splice(index, 1);
-            // Update local storage
+            // Updating local storage
             localStorage.setItem('cars', JSON.stringify(cars));
-            // Regenerate the table
+            // Regenerating the table
             generateTable();
+            displayMessage("Car deleted successfully")
         };
         let td = document.createElement("td");
         td.appendChild(deleteButton);
